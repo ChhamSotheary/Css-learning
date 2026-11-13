@@ -29,13 +29,15 @@ Bootstrap គ្រប់គ្រង responsive layout ត្រូវការ
 យក CSS link, JS bundle, version និង integrity ពី official docs។ ទម្រង់សង្ខេប៖
 ~~~html
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
-      rel="stylesheet">
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous">
 ~~~
 ដាក់ link ក្នុង head។ សម្រាប់ components ដែលប្រើ JavaScript ដាក់ bundle មុន </body>៖
 ~~~html
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
 ~~~
-ឧទាហរណ៍បង្ហាញ URL ទម្រង់ប៉ុណ្ណោះ; សម្រាប់ deployment សូមយក snippet ពេញពី official docs រួម integrity/crossorigin ដែលត្រូវនឹង version។ Bundle មាន Popper សម្រាប់ dropdown, popover និង tooltip។ បើត្រូវការ CSS/JS ពេល offline ត្រូវដំឡើង local package (មេរៀន 14)។
+Snippet ខាងលើប្រើ version 5.3.9 និង SRI hash តាម official docs។ SRI (Subresource Integrity) ជួយ browser ផ្ទៀងផ្ទាត់ថា file ដែលទាញមកត្រូវនឹង hash ដែលកំណត់។ ពេលប្តូរ version ត្រូវយក URL និង hash ថ្មីពី docs; កុំរក្សា hash ចាស់លើ file ថ្មី។ Bundle មាន Popper សម្រាប់ dropdown, popover និង tooltip។ បើត្រូវការ CSS/JS ពេល offline ត្រូវដំឡើង local package (មេរៀន 14)។
 
 ## ៤. Class ដំបូង
 ~~~html
